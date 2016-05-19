@@ -9,6 +9,9 @@ CreateJS 是一个非常流行（歪果仁）的、轻量级、
 本项目试图对 [EaselJS API doc](http://createjs.com/docs/easeljs/modules/EaselJS.html) 
 进行整理，同时分析其结构与运行原理，方便其他初学者学习，也方便以后查阅。
 
+CreateJS 的[中文站点](http://www.createjs.cc/) 有对 doc 文档介绍部分的初步[翻译](http://www.createjs.cc/easeljs/docs/modules/EaselJS.html),
+可以用来做参考。
+
 同时将分析 EaselJS 结构&原理的文章、制作的游戏&特效放在这里。
 
 **期待你的加入 ∩_∩**
