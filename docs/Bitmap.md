@@ -63,7 +63,8 @@ Bitmap 可以在显示列表中代表 Image、canvas、Video。它可以通过 H
 
 added 事件：每当对象被添加（addChild）到某个 Container 对象（包括 stage 对象）的时候触发。而 removed 事件与 added 相反。
 
-rollover/rollout 与 mouseover/mouseout 基本相同，但有以下两个差别：  
+rollover/rollout 与 mouseover/mouseout 基本相同，但有以下两个差别：
+
 1. 不会产生冒泡
 2. 如果监听的是一个 Container 的话，会将所有的子显示对象作为一个整体。
 例如有一个 Container 对象 c0，它包含连个子对象 shapeA、shapeB 。 c0 监听了 rollout 事件，shapeA 和 shapeB 在图形上相连。
