@@ -1,4 +1,4 @@
-## CreateJs 学习总结 —— EaselJS
+## EaselJS 基础教程
 
 ### 须知
 
