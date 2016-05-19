@@ -44,74 +44,74 @@ CreateJS 是一个非常流行（歪果仁）的、轻量级、
 
 > 请按重要性排序进行认领（开发常用的、直接使用(非继承)的 优先；重要的基类优先；）
 
-* [EaselJS]()
+* EaselJS
 
-* [DisplayObject]()
+* DisplayObject
 
-* [Container]()
+* Container
 
-* [AlphaMapFilter]()
-* [AlphaMaskFilter]()
-* [BitmapText]()
-* [BlurFilter]()
-* [ButtonHelper]()
-* [ColorFilter]()
-* [ColorMatrix]()
-* [ColorMatrixFilter]()
-* [DisplayProps]()
-* [DOMElement]()
+* AlphaMapFilter
+* AlphaMaskFilter
+* BitmapText
+* BlurFilter
+* ButtonHelper
+* ColorFilter
+* ColorMatrix
+* ColorMatrixFilter
+* DisplayProps
+* DOMElement
 
-* [Filter]()
+* Filter
 
-* [Shadow]()
+* Shadow
 
-* [Graphics]()
-* [Graphics.Arc]()
-* [Graphics.ArcTo]()
-* [Graphics.BeginPath]()
-* [Graphics.BezierCurveTo]()
-* [Graphics.Circle]()
-* [Graphics.ClosePath]()
-* [Graphics.Ellipse]()
-* [Graphics.Fill]()
-* [Graphics.LineTo]()
-* [Graphics.MoveTo]()
-* [Graphics.PolyStar]()
-* [Graphics.QuadraticCurveTo]()
-* [Graphics.Rect]()
-* [Graphics.RoundRect]()
-* [Graphics.Stroke]()
-* [Graphics.StrokeDash]()
-* [Graphics.StrokeStyle]()
+* Graphics
+* Graphics.Arc
+* Graphics.ArcTo
+* Graphics.BeginPath
+* Graphics.BezierCurveTo
+* Graphics.Circle
+* Graphics.ClosePath
+* Graphics.Ellipse
+* Graphics.Fill
+* Graphics.LineTo
+* Graphics.MoveTo
+* Graphics.PolyStar
+* Graphics.QuadraticCurveTo
+* Graphics.Rect
+* Graphics.RoundRect
+* Graphics.Stroke
+* Graphics.StrokeDash
+* Graphics.StrokeStyle
 
-* [Matrix2D]()
+* Matrix2D
 
-* [MouseEvent]()
+* MouseEvent
 
-* [MovieClip]()
-* [MovieClipPlugin]()
+* MovieClip
+* MovieClipPlugin
 
-* [Point]()
+* Point
 
-* [Rectangle]()
+* Rectangle
 
-* [Shape]()
+* Shape
 
-* [Sprite]()
-* [SpriteContainer]()
-* [SpriteSheet]()
-* [SpriteSheetBuilder]()
-* [SpriteSheetUtils]()
-* [SpriteStage]()
+* Sprite
+* SpriteContainer
+* SpriteSheet
+* SpriteSheetBuilder
+* SpriteSheetUtils
+* SpriteStage
 
-* [Stage]()
+* Stage
 
-* [Text]()
+* Text
 
-* [Touch]()
+* Touch
 
-* [UID]()
-* [Utility Method]()
+* UID
+* Utility Method
 
 
 ### 结构 & 原理
