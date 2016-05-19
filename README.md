@@ -29,7 +29,9 @@ CreateJS 是一个非常流行（歪果仁）的、轻量级、
 
 2. 了解其他整理过的文章并与其相互关联，前面的文章已经解释的知识给出链接即可
 
-3. 未完待续...
+3. 可以参考我正在整理的 [Bitmap](./docs/Bitmap.md)
+
+4. 未完待续...
 
 ### 已完成
 
@@ -38,7 +40,7 @@ CreateJS 是一个非常流行（歪果仁）的、轻量级、
 
 ### 进行中
 
-* [Bitmap](./Bitmap.md) by [tianyn1990](https://github.com/tianyn1990) 进度：70%
+* [Bitmap](./docs/Bitmap.md) by [tianyn1990](https://github.com/tianyn1990) 70%
 
 ### 未完成
 
