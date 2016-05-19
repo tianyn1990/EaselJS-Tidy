@@ -2,16 +2,32 @@
 
 Place to translate and **summarize** EaselJS doc.
 
-对 [EaselJS API doc](http://createjs.com/docs/easeljs/modules/EaselJS.html) 
-进行整理，同时分析其结构与运行原理，方便其他初学者，也方便以后查阅。
+CreateJS 是一个非常流行（歪果仁）的、轻量级、
+[Adobe 负责维护的](http://www.adobe.com/devnet/createjs.html) canvas 动画库。
+而 EaselJS 是 CreateJS 的核心部分。
 
-期待你的加入 ∩_∩
+本项目试图对 [EaselJS API doc](http://createjs.com/docs/easeljs/modules/EaselJS.html) 
+进行整理，同时分析其结构与运行原理，方便其他初学者学习，也方便以后查阅。
+
+同时将分析 EaselJS 结构&原理的文章、制作的游戏&特效放在这里。
+
+**期待你的加入 ∩_∩**
+
+### 开始前的准备
+
+1. 了解并实践 canvas 常用的 API  
+推荐文章：[MDN Canvas_API/Tutorial](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial)
+
+2. 了解并实践 canvas 的性能优化方法  
+推荐文章：[淘宝 Canvas 性能](http://taobaofed.org/blog/2016/02/22/canvas-performance/)
+
+3. 阅读 [EaselJS 基础教程](./learning.md)
 
 ### 整理方法
 
 1. 充分验证、适当的DEMO（建议[jsfiddle](https://jsfiddle.net)）、阅读源码、语句通顺
 
-2. 了解其他整理过的文章并与其相互关联，前面的文章已经解释清楚的给出链接即可
+2. 了解其他整理过的文章并与其相互关联，前面的文章已经解释的知识给出链接即可
 
 3. 未完待续...
 
@@ -19,8 +35,6 @@ Place to translate and **summarize** EaselJS doc.
 
 > 靠前的文中已经介绍的知识，后面的文只要做大概说明，并附上前文的链接即可。
 > 如果发现前文说法有问题或不充分，请与负责人商讨之后进行更改。
-
-* [基础教程](./learning.md)：初次参与必看
 
 ### 进行中
 
