@@ -24,7 +24,7 @@ CreateJS 的[中文站点](http://www.createjs.cc/) 有对 doc 文档介绍部�
 2. 了解并实践 canvas 的性能优化方法  
 推荐文章：[淘宝 Canvas 性能](http://taobaofed.org/blog/2016/02/22/canvas-performance/)
 
-3. 阅读 [EaselJS 基础教程](./learning.md)
+3. 阅读 [EaselJS 基础教程](./Tutorial.md)
 
 ## 整理方法
 
