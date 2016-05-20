@@ -46,7 +46,7 @@ CreateJS 的[中文站点](http://www.createjs.cc/) 有对 doc 文档介绍部�
 ## 进行中
 
 * [Bitmap](./docs/Bitmap.md) by [tianyn1990](https://github.com/tianyn1990) 70%
-* [Stage](./docs/Stage.md) by [tianyn1990](https://github.com/sparkmorry) 20%
+* [Stage](./docs/Stage.md) by [morry](https://github.com/sparkmorry) 20%
 ## 未完成
 
 > 请按重要性排序进行认领（开发常用的、直接使用(非继承)的 优先；重要的基类优先；）
