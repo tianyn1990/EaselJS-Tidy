@@ -254,7 +254,8 @@ Sprite & MovieClip frame advancing, DOMElement visibility handling。
 
 1. addEventListener  
 参数：( type  listener  [useCapture] )  
-继承：EventDispatcher 类  
+继承：[EventDispatcher](http://www.createjs.com/docs/easeljs/classes/EventDispatcher.html#method_addEventListener)
+  [addEventListener:154](http://www.createjs.com/docs/easeljs/files/createjs_events_EventDispatcher.js.html#l154)  
 说明：为当前对象注册事件，如果对多个事件注册同一个回调方法，方法有可能被触发多次。
 ```
 displayObject.addEventListener("click", handleClick);
@@ -265,12 +266,44 @@ function handleClick(event) {
 第三个参数 useCapture 参考[这里](../Tutorial.md#事件冒泡)
 返回值：第二个参数 listener
 
-2. cache [弃用]  
+2. cache  
+参数：( x  y  width  height  [scale=1] )  
+继承：[DisplayObject](http://www.createjs.com/docs/easeljs/classes/DisplayObject.html#method_cache)
+  [cache:749](http://www.createjs.com/docs/easeljs/files/easeljs_display_DisplayObject.js.html#l749)  
+说明：
+将显示对象绘制到一个新的 canvas 元素上，并应用在以后的绘制工作中。  
+对于不经常改变的「复合内容」对象（一个容器中包含很多不单独进行图形变换的子对象 或 矢量图），由于复杂的内容在每次 tick 中不需要重新绘制，
+因此可以极大地提升性能。  
+缓存对象允许随意进行图形变换等操作，但其子对象一旦发生变化，则必须更新这个缓存对象（通过调用 `updateCache(..)` 或 `cache(..)`）  
+在调用 `cache` 的过程中，你需要通过 x, y, width, height, scale 来指定需要缓存的区域，这个区域就是会被绘制到屏幕上的区域。
+该区域的坐标系参考对象本身。  
+举例：创建一个以 (0, 0) 为圆心，半径 25 的圆形，并缓存它：
+```
+var shape = new createjs.Shape();
+shape.graphics.beginFill("#ff0000").drawCircle(0, 0, 25);
+shape.cache(-25, -25, 50, 50);
+```
+因为 Bitmap 对象已经是「简单内容」对象（资源只有一个 image、video、canvas，且绘制操作只调用一个 API drawImage），
+因此没有使用缓存的必要，反而会占用更多的空间造成性能下降。  
+如果使用 Filter 滤镜，则必须首先进行缓存。  
+缓存提升性能的原理：[离屏 canvas ](https://github.com/tianyn1990/tianyn1990.github.io/blob/master/Canvas/Learning.md#其他手段离屏canvas)    
+参考 [DEMO](https://jsfiddle.net/tianyn1990/7vjey068/)  
+
+3. uncache  
 参数：无  
-继承：DisplayObject  
-说明：因为 Bitmap 对象已经是「简单格式」对象（的资源只有一个 image、video、canvas，且绘制操作只调用一个 API drawImage），
-因此没有使用缓存的必要。  
-缓存提升性能的原理：[离屏 canvas 技术](https://github.com/tianyn1990/tianyn1990.github.io/blob/master/Canvas/Learning.md#其他手段离屏canvas)
+说明：与 `cache` 相对，清除缓存。一个对象是否已缓存，可通过属性 `cacheCanvas` 是否有值来判断。
+
+4. clone  
+参数：无  
+继承：[DisplayObject](http://www.createjs.com/docs/easeljs/classes/DisplayObject.html#method_clone)
+  但 Bitmap 的 [clone:192](http://www.createjs.com/docs/easeljs/files/easeljs_display_Bitmap.js.html#l192) 中重写了该函数
+说明：返回一个当前显示对象的拷贝
+
+5. dispatchEvent  
+参数：( eventObj  [bubbles]  [cancelable] )  
+继承：[DisplayObject](http://www.createjs.com/docs/easeljs/classes/EventDispatcher.html#method_dispatchEvent)
+:[dispatchEvent:299](http://www.createjs.com/docs/easeljs/files/createjs_events_EventDispatcher.js.html#l299)  
+
 
 
 
