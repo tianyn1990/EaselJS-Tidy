@@ -56,7 +56,7 @@ function initPt() {
     next = PATH[i + 1] || PATH[l - 1];
     var deltaX = next.x - pre.x,
       deltaY = next.y - pre.y;
-    pt.rot = Math.atan2(deltaX, deltaY) * 180 / Math.PI + 90;
+    pt.rot = Math.atan2(deltaY, deltaX) * 180 / Math.PI;
     paths.push(pt);
   }
   paths.totalDis = tdis;
@@ -152,7 +152,6 @@ function move(shape, disDif, isLast) {
     }
   }
   shape.rotation = r * nrot + (1 - r) * prot;
-  shape.rotation = -shape.rotation + 180;
   //小火车掉头
   if (i > 67) {
     shape.scaleY = -1;
