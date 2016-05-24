@@ -125,4 +125,4 @@ CreateJS 的[中文站点](http://www.createjs.cc/) 有对 doc 文档介绍部�
 
 ## 游戏 & 特效
 
-1. [在轨道上奔跑的小火车](http://tianyn1990.github.io/CreateJS/games/train/index.html)
+1. [在轨道上奔跑的小火车](http://tianyn1990.github.io/CreateJS/games/train/index.html)、[jsfiddle DEMO](https://jsfiddle.net/tianyn1990/v0qshvz1/)
