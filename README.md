@@ -132,3 +132,4 @@ CreateJS 的[中文站点](http://www.createjs.cc/) 有对 doc 文档介绍部�
 
 1. [HTML5 2D 游戏开发 系列文章](http://www.ibm.com/developerworks/cn/views/web/libraryview.jsp?site_id=10&contentarea_by=Web%20development&sort_by=Date&sort_order=2&start=1&end=11&topic_by=&product_by=&type_by=%E6%89%80%E6%9C%89%E7%B1%BB%E5%88%AB&show_abstract=true&search_by=HTML5%20%E6%B8%B8%E6%88%8F%20%E5%BC%80%E5%8F%91&industry_by=&series_title_by=)
 2. [碰撞检测--分离轴定理](http://blog.lxjwlt.com/front-end/2014/09/04/2D-collide-detection.html)
+3. [小火车是怎么跑起来的](http://taobaofed.org/blog/2015/12/28/anim-train/)
