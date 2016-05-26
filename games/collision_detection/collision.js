@@ -380,7 +380,6 @@
     }
     return vec;
   };
-  window.Vector = Vector;
 
   /**
    * 求矢量的点积
