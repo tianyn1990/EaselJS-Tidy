@@ -269,21 +269,95 @@ train.speed = Math.sqrt(C1 - C2 * train.y)
 #### 二、碰撞检测
 
 参考文章：[碰撞检测--分离轴定理](http://blog.lxjwlt.com/front-end/2014/09/04/2D-collide-detection.html)、
-[HTML5 2D 游戏开发 系列文章](http://www.ibm.com/developerworks/cn/views/web/libraryview.jsp?site_id=10&contentarea_by=Web%20development&sort_by=Date&sort_order=2&start=1&end=11&topic_by=&product_by=&type_by=%E6%89%80%E6%9C%89%E7%B1%BB%E5%88%AB&show_abstract=true&search_by=HTML5%20%E6%B8%B8%E6%88%8F%20%E5%BC%80%E5%8F%91&industry_by=&series_title_by=)
+[HTML5 2D 游戏开发: 碰撞检测和 sprite 动画](http://www.ibm.com/developerworks/cn/web/wa-html5-game8/index.html)
 
 在我的[这个 DEMO](http://tianyn1990.github.io/CreateJS/games/collision_detection/separating_axis/index.html)
-中，根据参考文章中的原理，制作了工具方法，来判断两个 Shape 对象是否相交。
+中，根据参考文章中的原理，制作了工具方法，专门用来判断两个 Shape 对象是否相交。
+
+在游戏中要模拟物体间的一次碰撞，我们需要做的有：碰撞检测和碰撞行为。
+碰撞检测指判断物体之间是否发生了碰撞。碰撞行为是指如果物体间发生了碰撞，物体状态应该如何改变。
+这里将简要地介绍一下碰撞检测。
+
+碰撞检测又分为两个阶段：粗略、精密。
+
+因为碰撞检测需要比较高的计算量，因此我们要先把需要检测的图形挑选出来，这个过程被称为粗略检测。
+
+精密阶段的碰撞检测主要有三种方法（由先进程度排序）：
+
+1. 边界区域
+2. 光线投射
+3. 分离轴定理
+
+在上面的 DEMO 中主要使用了 边界区域、分离轴定理 两种方法进行检测。下面我们分别来探讨：
+
+##### 边界区域检测
+
+通常用于检测圆形、矩形之间是否相交。
+
+分为 3 种情况：圆 & 圆、圆 & 矩形、矩形 & 矩形。
+
+假设：  
+圆形：圆心 (cc.x, cc.y) 半径 cc.r  
+矩形：左上角 (r.x, r.y) 宽高 r.w, r.h
+
+圆形之间相交条件：圆心距离小于半径
+```
+Math.sqrt(Math.pow(cc1.x - cc2.x, 2) + Math.pow(cc1.y - cc2.y, 2)) < cc1.r + cc2.r;
+```
+
+矩形之间相交条件：
+```
+r1.x > r2.x - r1.w &&
+r1.x < r2.x + r2.w &&
+r1.y > r2.y - r1.h &&
+r1.y < r2.y + r2.h;
+```
+
+圆与矩形之间相交：可以转化为两个矩形之间、或者两个圆形之间相交。
+当然这样会在图形的四个角产生误差。
+
+![image](http://tianyn1990.github.io/CreateJS/games/train/images/collision_detection.jpg)
+
+注意：对于不规则图形，可以通过缩小/扩大检测范围，来提高检测效果。
+
+##### 光线投射检测
+
+这个检测方法我没事试验过。它的出现时因为「边界区域检测」可能存在的一个问题：  
+当边界区域太小或移动得太快时，检测可能失败。在这两种情况下，图形可在单个动画帧中彼此穿过，进而避免检测。
+
+##### 分离轴定理检测
+
+[这篇文章](http://blog.lxjwlt.com/front-end/2014/09/04/2D-collide-detection.html) 
+讲的很好，我基本就是按它思路来实现的。（文中的图片需要翻墙看哦~）
+
+![image](http://tianyn1990.github.io/CreateJS/games/train/images/separating_axis01.jpg)
+![image](http://tianyn1990.github.io/CreateJS/games/train/images/separating_axis02.jpg)
+![image](http://tianyn1990.github.io/CreateJS/games/train/images/separating_axis03.jpg)
+![image](http://tianyn1990.github.io/CreateJS/games/train/images/separating_axis04.jpg)
+
+##### 一点点开发心得
+
+在开发碰撞检测工具的时候，体会到「设计模式：单一职责原则」的好处。
+该原则指出：一个类/方法只负责一件事情。
+
+虽然稍有经验的开发人员，在不知道单一职责原则的时候，也会自觉遵守该原则。
+
+但我发现有意识的这样做效率会有一定提高，尤其是针对比较复杂的逻辑结构：
+
+1. 先分析整体逻辑结构
+2. 然后划分各个方法
+3. 最后实现每个方法
+
+对于高级语言来说，它有两个层面的含义：类、方法，但对 js 来说更多的是方法的职责划分。
+扩展一下的话，类、模块 的划分也是基于该原则的，但区别在于是否有意识的去运用。
+
+不要把方法的拆解放到代码 review 或者 重构中去做。
 
 
-碰撞检测的三种方法：
+### 待研究的内容
 
-1.
+不重叠的碰撞、模拟碰撞后的效果、如何预测小球的移动路径
 
-
-2、碰撞检测3方法：如何运用、要注意的
-3、扩展Shape类的碰撞检测：开发方式心得（单一职责原则）、性能优化
-4、硬碰撞、两个运动小球碰撞后的效果、如何预测移动路径
-5、结束
 
 
 
