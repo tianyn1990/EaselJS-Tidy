@@ -3,7 +3,7 @@
 Place to translate and **summarize** EaselJS doc.
 
 CreateJS 是一个非常流行（歪果仁）的、轻量级、
-[Adobe 负责维护的](http://www.adobe.com/devnet/createjs.html) canvas 动画库。
+[Adobe 官方赞助](http://www.adobe.com/devnet/createjs.html)的 canvas 动画库。
 而 EaselJS 是 CreateJS 的核心部分。
 
 本项目试图对 [EaselJS API doc](http://createjs.com/docs/easeljs/modules/EaselJS.html) 
