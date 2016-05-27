@@ -193,9 +193,9 @@ createjs.Ticker.on('tick', function (evt) {
 3. 存储为 svg 格式（文件-存储为）
 4. 通过查看 svg 文件，我们可以获取到轨道的坐标信息
 
-结果如下图（图片格式：svg）：
+结果如下图：
 
-![image](http://tianyn1990.github.io/CreateJS/games/train/images/rail-1025-420.svg)
+![image](http://tianyn1990.github.io/CreateJS/games/train/images/rail-1025-420.svg.jpg)
 
 ##### 确定位置
 
