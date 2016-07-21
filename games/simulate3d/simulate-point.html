@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=3,width=device-width"/>
+  <title></title>
+  <style>
+    * { margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; }
+    .m-tutorial {
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 1.5;
+      padding: 20px;
+      background: rgba(0, 0, 0, .3);
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      transition: all .5s ease-out .5s;
+      opacity: 0;
+    }
+    .m-tutorial.z-show{
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+<canvas id="cvs"></canvas>
+<dl class="m-tutorial">
+  <dt>食用方法：</dt>
+  <dd>1. 光标位置决定旋转速度</dd>
+  <dd>2. 支持拖动</dd>
+  <dd>3. 试一试 w/s/a/d 键</dd>
+</dl>
+</body>
+<script type="text/javascript" src="../lib/createjs-2015.11.26.min.js"></script>
+<script type="text/javascript" src="../lib/tween.js"></script>
+<script type="text/javascript" src="./tools.js"></script>
+<script type="text/javascript" src="../lib/fsm-mine.js"></script>
+<script type="text/javascript" src="./simulate-point.js"></script>
+</html>
